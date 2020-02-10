@@ -1,4 +1,4 @@
-
+//  NAMA: Hamzah Abdullah Mubarak
 
 function highestScore (students) {
     var obj = {}

@@ -1,11 +1,10 @@
 //  NAMA: Hamzah Abdullah Mubarak
 
-function highestScore (students) {
-    // Code disini
+function graduates (students) {
+    
 }
 
-// TEST CASE
-console.log(highestScore([
+console.log(graduates([
 {
     name: 'Dimitri',
     score: 90,
@@ -29,12 +28,16 @@ console.log(highestScore([
 ]));
 
 // {
-//   foxes: { name: 'Dimitri', score: 90 },
-//   wolves: { name: 'Alexei', score: 85 }
+//   foxes: [
+//     { name: 'Dimitri', score: 90 }
+//   ],
+//   wolves: [
+//     { name: 'Alexei' , score: 85 },
+//     { name: 'Anastasia', score: 78 }
+//   ]
 // }
 
-
-console.log(highestScore([
+console.log(graduates([
 {
     name: 'Alexander',
     score: 100,
@@ -63,10 +66,17 @@ console.log(highestScore([
 ]));
 
 // {
-//   foxes: { name: 'Alexander', score: 100 },
-//   wolves: { name: 'Alisa', score: 76 },
-//   tigers: { name: 'Viktor', score: 80 }
+//   foxes: [
+//     { name: 'Alexander', score: 100 },
+//     { name: 'Vladimir', score: 92 }
+//   ],
+//   wolves: [
+//     { name: 'Alisa', score: 76 },
+//   ],
+//   tigers: [
+//     { name: 'Viktor', score: 80 }
+//   ]
 // }
 
 
-console.log(highestScore([])); //{}
+console.log(graduates([])); //{}
