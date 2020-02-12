@@ -8,7 +8,6 @@ function highestScore (students) {
             // console.log('dia undifined');
             obj[students[i].class] = students[i]
             delete obj[students[i].class].class
-
         }
         else {
             // console.log('dia ga undifined');
@@ -18,7 +17,8 @@ function highestScore (students) {
             }
         }
     }
-    console.log(obj);
+    // console.log(obj);
+    return obj
 }
 
 
