@@ -1,16 +1,5 @@
 //  NAMA: Hamzah Abdullah Mubarak
 
-/**
- * 
- * loop si shoppers
- *     loop si listbarang
- *          buat var obj = {
- *                              product: '',
- *                              shoppers: [],
- *                              leftover: ,
- *                              totalprofit: 
- *                          }
- */
 
 function countProfit(shoppers) {
     let listBarang = [ ['Sepatu Stacattu', 1500000, 10],
@@ -18,11 +7,31 @@ function countProfit(shoppers) {
                        ['Sweater Uniklooh', 175000, 1]
                      ];
 
-    for (let i = 0; i < shoppers.length; i++) {
-        for (let j = 0; j < listBarang.length; j++) {
-            
+    var hasil = []
+    for (let i = 0; i < listBarang.length; i++) {
+        var obj = {
+            product: listBarang[i][0],
+            shoppers: [],
+            leftover: listBarang[i][2],
+            totalprofit: 0
+        }
+
+        for (let j = 0; j < shoppers.length; j++) {
+            if (obj.leftover >= shoppers[j].amount){
+                if (shoppers[j].product === listBarang[i][0]){
+                    obj.shoppers.push(shoppers[j].name)
+                    obj.totalprofit += listBarang[i][1] * shoppers[j].amount
+                    obj.leftover -= shoppers[j].amount
+                }
+            }
+        }
+        // console.log(obj);
+
+        if (shoppers.length !== 0){
+            hasil.push(obj)
         }
     }
+    return hasil
 }
 
 // TEST CASES
